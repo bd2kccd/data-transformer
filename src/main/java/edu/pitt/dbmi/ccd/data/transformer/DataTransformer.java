@@ -18,6 +18,9 @@
  */
 package edu.pitt.dbmi.ccd.data.transformer;
 
+import java.io.IOException;
+import java.io.PrintStream;
+
 /**
  *
  * Apr 12, 2016 12:25:31 PM
@@ -25,5 +28,13 @@ package edu.pitt.dbmi.ccd.data.transformer;
  * @author Kevin V. Bui (kvb2@pitt.edu)
  */
 public interface DataTransformer {
+
+    public static final byte NEW_LINE = '\n';
+
+    public static final byte CARRIAGE_RETURN = '\r';
+
+    public static final byte BLANK_SPACE = ' ';
+
+    public void writeAsTabular(PrintStream output, char delimiter) throws IOException;
 
 }
